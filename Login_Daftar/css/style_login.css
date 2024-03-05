@@ -1,0 +1,153 @@
+@font-face {
+    font-family: poppins;
+    src: url(../../Poppins/Poppins-Black.ttf);
+  }
+  @font-face {
+      font-family: rutalic;
+      src: url(../../Rubik/Rubik-Italic-VariableFont_wght.ttf);
+  }
+  @font-face {
+      font-family: rubik;
+      src: url(../../Rubik/Rubik-VariableFont_wght.ttf);
+  }
+  @font-face {
+      font-family: work;
+      src: url(../../Work_Sans/WorkSans-VariableFont_wght.ttf);
+  }
+  @font-face {
+      font-family: wotalic;
+      src: url(../../Work_Sans/WorkSans-Italic-VariableFont_wght.ttf);
+  }
+  :root{
+      --white:white;
+      --black:black;
+      --red:brown;
+      --abang:red;
+      --background: rgb(243, 243, 239);
+      --ijo:green;
+      --shadow:0 10px 0 0 rgba(0,0,0,0.8);
+      --animasi : 0.5s ease-in-out;
+  }
+  * {
+    font-family: poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--white);
+  }
+.container-img img{
+    width: 400px;
+    margin-left: 150px;
+    animation: goyang 3s ease-in-out infinite;
+}
+.container-form{
+    margin-left:200px;
+}
+.container-form form label{
+    color: rgb(0, 0, 0);
+}
+.container-form h1,h3{
+    text-align: center;
+    position: relative;
+}
+.container-form h1::before{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--black);
+    height: 2px;
+    width: 120px;
+    top: 50%;
+    left: 0;
+    z-index: -2;
+}
+.container-form h1::after{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--black);
+    height: 2px;
+    width: 120px;
+    top: 50%;
+    right: 0;
+    z-index: -2;
+}
+.container-form h3::before{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--black);
+    height: 2px;
+    width: 65px;
+    top: 50%;
+    left: 0;
+    z-index: -2;
+}
+.container-form h3::after{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--black);
+    height: 2px;
+    width: 65px;
+    top: 50%;
+    right: 0;
+    z-index: -2;
+}
+.container-form h1 span, .container-form h3 span{
+    background-color: var(--white);
+}
+.container-form form input{
+    display: block;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 15px;
+    border: 0.5px solid black;
+    margin: 10px;
+    width: 100%;
+    font-family: rubik;
+}
+.container-form form p{
+    font-family: work;
+    font-size: 15px;
+}
+.container-form form p a{
+    color: var(--red);
+    text-decoration: underline;
+}
+.container-form form p a:hover{
+    color: orange;
+    transition: 0.3s ease-in-out;
+}
+.container-form form .btn{
+    width: auto;
+    background-color:rgb(245, 182, 11);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+.container-form form .btn:hover{
+    background-color: rgb(204, 134, 14);
+    color: var(--white);
+    transition: 0.3s ease-in-out;
+}
+@keyframes goyang{
+    0% {
+        transform:translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    } 
+    100%{
+        transform: translateY(0);
+    }
+        
+}

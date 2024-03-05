@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar</title>
+    <link rel="stylesheet" href="../css/style_register.css">
+  </head>
+  <body>
+      <div class="container-gambar">
+        <img src="../image/logo1.png" alt="LogoRpl.png" />
+      </div>
+      <div class="form-container">
+        <h1><span>Daftar</span></h1>
+        <form action="../proses/Proses_daftar.php" method="POST">
+          <label for="nama">Nama</label>
+          <input type="text" required name="nama" placeholder="Masukan Nama Anda" id="nama">
+          <label for="email">Email</label>
+          <input type="email" required placeholder="Masukan Email" name="email" id="email">
+          <label for="password">Password</label>
+          <input type="password" required placeholder="Masukan Password" name="password" id="password">
+          <label for="passowrd2">Konfirmasi Password</label>
+          <input type="password" name="password2" id="konfirmasi_passowrd" placeholder="Konfirmasi Password" required>
+          <input type="submit" value="Daftar" class="btn">
+          <p>Jika Sudah Ada Akun Langsung <a href="login.html">Login</a> Aja!!!!</p>
+        </form>
+        <h3><span>SMK PGRI 3 MALANG</span></h3>
+      </div>
+  </body>
+</html>

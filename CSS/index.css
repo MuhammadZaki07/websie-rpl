@@ -1,0 +1,365 @@
+@font-face {
+  font-family: poppins;
+  src: url(../Poppins/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: rubik;
+  src: url(../Rubik/Rubik-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: work;
+  src: url(../Work_Sans/WorkSans-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: bunga;
+  src: url(../Bungee_Spice/BungeeSpice-Regular.ttf);
+}
+@font-face {
+  font-family: nunito;
+  src: url(../Nunito/Nunito-VariableFont_wght.ttf);
+}
+:root {
+  --oranye: rgb(225, 165, 0);
+  --black: #000000;
+  --abu-abu: #666;
+  --white: white;
+  --merah: brown;
+  --coklat: #ef9905;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+}
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: rubik;
+  transition: all 0.2s linear;
+}
+html {
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+header {
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 7%;
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+  justify-content: space-between;
+}
+header .logo-kiri i,
+h2 {
+  color: var(--black);
+  font-size: 30px;
+  display: inline;
+}
+header .logo-kiri h2 {
+  text-decoration: line-through;
+}
+header .navbar i {
+  color: var(--coklat);
+  font-size: 1.5rem;
+  margin-right: 50px;
+  transition: 0.3s ease-in-out;
+}
+header .navbar a i:hover {
+  color: rgb(185, 112, 23);
+}
+.navbar i:hover {
+  padding: 10px;
+}
+header .logo i {
+  color: var(--white);
+  font-size: 1.5rem;
+  background-color: var(--coklat);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+header .logo i:hover {
+  background: #88670c;
+  color: var(--black);
+  cursor: pointer;
+}
+.menu {
+  position: relative;
+  display: inline-block;
+}
+.konten-menu {
+  position: absolute;
+  display: none;
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+  border-radius: 10px;
+  min-width: 160px;
+  z-index: 1;
+}
+.konten-menu a {
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 20px;
+  color: var(--black);
+  font-family: work;
+  display: block;
+}
+.konten-menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.menu:hover .konten-menu {
+  display: block;
+}
+.menu a:hover .dropmenu {
+  display: block;
+}
+section {
+  padding: 2rem 10%;
+}
+section:nth-child(odd) {
+  background: white;
+}
+section:nth-child(even) {
+  background: #eee;
+}
+.home .container .container-text {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.home .container-text .text .logo-kelas {
+  flex: 1 1 20rem;
+}
+.home .container-text .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+.home .container-text .text .text-wrap h1 {
+  flex: 1 1 50rem;
+  font-size: 5rem;
+  margin: 0;
+}
+.home .container-text .text .text-wrap h1:hover,
+.home .container-text .text .text-wrap h2:hover {
+  padding: 20px;
+  transition: 0.4s ease-in-out;
+}
+.home .container-text .text .text-wrap h2 {
+  font-size: 2rem;
+  font-family: work;
+}
+.home .container-text .text .text-paragraf {
+  max-width: 50%;
+}
+.home .container-text .text .text-wrap p {
+  font-size: 1rem;
+  text-align: justify;
+  color: var(--coklat);
+  font-family: work;
+}
+.sidebar-container {
+  display: flex;
+  right: 0;
+  position: absolute;
+}
+.sidebar {
+  z-index: 100000;
+  transform: translateX(100%);
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  width: 300px;
+  min-height: 270vh;
+  transition: 0.5s ease-in-out;
+}
+.sidebar.active {
+  transform: translateX(0%);
+}
+.sidebar .head {
+  background-color: #ffb700;
+  padding: 23px;
+}
+.sidebar .head i {
+  text-align: left;
+  font-size: 2rem;
+  color: var(--black);
+}
+.sidebar .head i:hover {
+  cursor: pointer;
+  color: var(--coklat);
+}
+.sidebar .body a {
+  display: block;
+  color: black;
+  font-family: "Segoe UI";
+  text-align: center;
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+}
+.sidebar .body a:hover {
+  background-color: var(--coklat);
+  padding: 30px 15px;
+}
+.main-section .content-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto auto;
+  gap: 10px;
+  overflow: auto;
+  text-align: center;
+}
+
+.content-main .img-card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 250px;
+  margin: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.content-main .img-card .gambar {
+  border-bottom: 1px solid var(--coklat);
+  padding: 10px;
+}
+.content-main .img-card .gambar img {
+  max-width: 210px;
+  height: auto;
+}
+/* .container-struktur{
+display: flex;
+gap: 10px;
+justify-content: center;
+align-items: 100vh;
+flex-wrap: wrap;
+} */
+.struktur{
+  padding: 5rem;
+}
+
+.struktur .container-struktur .card{
+  display: grid;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: var(--box-shadow);
+}
+.container-struktur .card .content-struktur{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 0 10px;
+}
+.container-struktur .card .images{
+width: 120px;
+height: 120px;
+border-radius: 50%;
+overflow: hidden;
+margin-top: -100px;
+}
+.container-struktur .card .images img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-struktur .text-profil{
+  text-align: center;
+}
+.struktur .container-teacher{
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 1.5rem; */
+  display: flex;
+  justify-content: space-evenly;
+}
+.struktur .sci span{
+margin-left: 10px;
+}
+.sci span a i{
+  color: var(--black);
+  font-size: 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+.sci span a i:hover{
+  padding: 10px;
+  color:var(--coklat);
+}
+.footer .box-container {
+display: flex;
+justify-content: space-between;
+}
+.footer .box-container .box h3 {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: var(--black);
+}
+.footer .box-container .box a {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color:rgba(0, 0, 0, 0.7);
+}
+
+.footer .box-container .box a:hover {
+  color: var(--oranye);
+  text-decoration: underline;
+}
+.footer .credit {
+  text-align: center;
+  border-top: 0.2rem solid rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  color: var(--black);
+  padding: 0.5rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+.footer .credit span {
+  color: var(--black);
+  font-size: 15px;
+}
+
+
+@keyframes gerak {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (max-width: 640px) { 
+  .header .navbar{
+    display: none;
+  }
+  .home .container-text .text .logo-kelas {
+  display: none;
+  }
+  .home .container-text .text {
+    display: block;
+  }
+  .container-text .text-paragraf{
+    width: auto;
+    justify-content:left;
+  }
+  .home .container-text .text-paragraf p{
+    text-align:start;
+    font-size: 30px;
+  
+  }
+}

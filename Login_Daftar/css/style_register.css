@@ -1,0 +1,157 @@
+@font-face {
+  font-family: poppins;
+  src: url(../../Poppins/Poppins-Black.ttf);
+}
+@font-face {
+    font-family: rutalic;
+    src: url(../../Rubik/Rubik-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: rubik;
+    src: url(../../Rubik/Rubik-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: work;
+    src: url(../../Work_Sans/WorkSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: wotalic;
+    src: url(../../Work_Sans/WorkSans-Italic-VariableFont_wght.ttf);
+}
+:root{
+    --white:white;
+    --black:black;
+    --red:brown;
+    --abang:red;
+    --ijo:green;
+    --shadow:0 10px 0 0 rgba(0,0,0,0.8);
+    --animasi : 0.5s ease-in-out;
+}
+* {
+  font-family: poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  min-height: 100vh;
+  align-items: center;
+  background-color:var(--white);
+}
+.container-gambar{
+    margin-left: 100px;
+}
+.container-gambar img{
+    animation: goyang 2s ease-in-out infinite;
+}
+.form-container{
+    margin-left: 130px;
+}
+.form-container .btn{
+   width: auto;
+   padding: 15px 30px;
+   background-color: orange;
+   color: white;
+   cursor: pointer;
+   border: 0.5px;
+   border-radius: 8px;
+}
+.form-container .btn:hover{
+    background-color: rgb(158, 108, 9);
+    color: var(--white);
+    transition: 0.5s ease-in-out;
+}
+.form-container form input {
+  margin: 10px;
+  border-radius: 8px;
+  display: block;
+  padding: 15px;
+  border: 0.5px solid black;
+  background: white;
+  width: 100%;
+  font-family: work;
+}
+.form-container p{
+    font-family: rubik;
+    font-size: 18px;
+}
+.form-container p a{
+    font-family: work;
+    color: var(--red);
+    text-decoration: underline;
+}
+.form-container p a:hover{
+    color: orange;
+    transition: 0.3s ease-in-out;
+}
+.form-container h1{
+    position: relative;
+    text-align: center;
+}
+.form-container h1::before{
+    content: "";
+    height: 2px;
+    display: block;
+    position: absolute;
+    width: 105px;
+    background-color: rgb(168, 4, 4);
+    top: 50%;
+    left: 0;
+    z-index: -2;
+}
+.form-container h1::after{
+    content: "";
+    height: 2px;
+    display: block;
+    position: absolute;
+    width: 105px;
+    background-color: rgb(168, 4, 4);
+    top: 50%;
+    right: 0;
+    z-index: -2;
+}
+.form-container h1 span{
+    background:var(--white);
+}
+.form-container  h3{
+    position: relative;
+    text-align: center;
+}
+.form-container h3::before{
+    content: "";
+    width: 65px;
+    display: block;
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    left: 0;
+    z-index: -2;
+}
+.form-container h3::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 65px;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    right: 0;
+    z-index: -2;
+}
+ .form-container span{
+    background:var(--white);
+}
+@keyframes goyang{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
